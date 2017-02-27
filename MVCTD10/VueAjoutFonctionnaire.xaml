@@ -1,0 +1,53 @@
+﻿<Window x:Class="MVCTD10.VueAjoutFonctionnaire"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVCTD10"
+        mc:Ignorable="d"
+        Title="Ajouter un fonctionnaire" Height="350" Width="300">
+    <StackPanel Orientation="Vertical" Background="LightGray" >
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Label Content="Nom"/>
+            <TextBox  x:Name="Nom" Width="150" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"  Margin="10">
+            <Label Content="Prenom"/>
+            <TextBox x:Name="Prenom" Width="150"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"  Margin="10">
+            <Label Content="Poste"/>
+            <TextBox x:Name="Poste" Width="150"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"  Margin="10">
+            <Label Content="Departement"/>
+            <TextBox x:Name="Departement" Width="150"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Label Content="Salaire"/>
+            <TextBox Name="Salaire" Width="150"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Button Click="AddFonctionnaire" Content="Ajouter ce fonctionnaire !" Margin="10" Width="auto" Background="Ivory" BorderThickness="2"/>
+            <Button Click="Return" Content="Retour" Margin="10" BorderThickness="2" Foreground="White" Background="SlateGray"/>
+        </StackPanel>
+
+    </StackPanel>
+    <!--<WrapPanel >
+        <StackPanel>
+            <Label Content="Nom"/>
+            <Label Content="Prenom"/>
+            <Label Content="Poste"/>
+            <Label Content="Departement"/>
+            <Label Content="Salaire"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBox Name="Nom" Width="200" />
+            <TextBox Name="Prenom" Width="200"/>
+            <TextBox Name="Poste" Width="200"/>
+            <TextBox Name="Departement" Width="200"/>
+            <TextBox Name="Salaire" Width="200"/>
+        </StackPanel>
+    </WrapPanel>-->
+</Window>

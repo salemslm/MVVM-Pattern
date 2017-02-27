@@ -1,0 +1,42 @@
+﻿<Window x:Class="MVCTD10.Vue"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVCTD10"
+        mc:Ignorable="d"
+        Title="Recherche" Height="500" Width="1000">
+    <WrapPanel Name="BigStack" Orientation="Vertical" Background="LightGray">
+        <WrapPanel Orientation ="Horizontal" Name="ResearchForm" >
+            <StackPanel Orientation="Vertical" Margin="10">
+                <Label Content="Nom"/>
+                <TextBox Name="Nom" Width="100" Text=""/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="10">
+                <Label Content="Titre du poste"/>
+                <TextBox Name ="Poste" Width="100" Text="" />
+            </StackPanel>
+        </WrapPanel>
+        <Grid Height="340">
+            <ListView  Margin="10" Name="lvFonctionnaires" Background="White">
+                <ListView.View>
+                    <GridView >
+                        <GridViewColumn Header="Nom" Width="200" DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Prenom" Width="200" DisplayMemberBinding="{Binding Prenom}" />
+                        <GridViewColumn Header="Poste" Width="200" DisplayMemberBinding="{Binding Poste}" />
+                        <GridViewColumn Header="Departement" Width="200" DisplayMemberBinding="{Binding Departement}" />
+                        <GridViewColumn Header="Salaire" Width="150" DisplayMemberBinding="{Binding Salaire}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+        <StackPanel Orientation="Horizontal">
+            <Button Width="30" Height="30" Content="Go !" HorizontalAlignment="Right" Click="FindPerson" Margin="10" Foreground="White" Background="Red" BorderThickness="2"/>
+            <Button Width="100" Height="30" Content="Save on XML" Click="EcritureXML" BorderThickness="2" Foreground="White" Background="Gray"/>
+            <Button Width="auto" Height="30" Content="Ajouter un fonctionnaire" Click="RedirectToAddFonctionnaire" Margin="10" BorderThickness="2"  Background="white"/>
+        </StackPanel>
+
+    </WrapPanel>
+
+
+</Window>
